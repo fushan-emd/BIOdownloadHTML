@@ -51,6 +51,7 @@ Linux/Mac 用户，请使用： docker run -p 8501:8501 -v $(pwd):/data boyanwan
 
 点击 开始下载。
 
+---
 
 ## ⚡ Windows 用户懒人脚本 (.bat)
 Windows 用户可以在本地创建一个名为 启动下载器.bat 的文件，粘贴以下内容。以后只需双击该文件即可自动运行，无需输入命令。
@@ -68,6 +69,7 @@ docker run --rm -p 8501:8501 -v %drive%:\:/data boyanwan/biodownload:latest
 pause
 ```
 
+---
 
 ## 🛠️ 源码安装 (开发者模式)
 如果你熟悉 Python/Conda 且不想使用 Docker，可以从源码运行。
@@ -104,6 +106,8 @@ pip install streamlit
 streamlit run app.py
 ```
 
+---
+
 ## ❓ 常见问题 (FAQ)
 Q1: 为什么下载完成后文件夹是空的？
 
@@ -124,6 +128,8 @@ A: 点击网页右上角的 "Stop" 按钮，或者直接刷新网页（F5），�
 Q4: 我可以用它下载受控数据 (dbGaP) 吗？
 
 A: 不支持。本工具仅支持公开数据（Public Data）。受控数据需要特定的密钥和权限，请使用官方 prefetch 工具。
+
+---
 
 📄 License
 本项目基于 MIT License 开源。
