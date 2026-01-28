@@ -10,6 +10,7 @@
 BIOdownloadHTML 是一个轻量级、可视化的生物信息数据下载工具。它封装了 `iseq` 核心，解决了生信小白在 Windows 上配置环境难、命令行操作复杂的问题。
 
 ## ✨ 主要功能
+
 - **小白友好**：纯图形化 Web 界面，无需敲代码。
 - **多源支持**：
   - 🇺🇸 **SRA (NCBI)**: 美国数据库，数据最全。
@@ -34,12 +35,12 @@ BIOdownloadHTML 是一个轻量级、可视化的生物信息数据下载工具�
 ```powershell
 # 假设你想把数据下载到 F 盘 (请根据实际情况修改盘符)
 docker run -p 8501:8501 -v F:\:/data boyanwan/biodownload:latest
-```powershell
-注意：
+```
+📝 注意：
 
 -v F:\:/data 表示将你的 F 盘挂载到容器内。下载的数据会出现在 F:\ 下你指定的文件夹中。
 
-如果你是 Linux/Mac 用户，请使用 -v /your/path:/data。
+Linux/Mac 用户，请使用： docker run -p 8501:8501 -v $(pwd):/data boyanwan/biodownload:latest
 
 3. 开始使用
 打开浏览器访问：http://localhost:8501
@@ -50,10 +51,11 @@ docker run -p 8501:8501 -v F:\:/data boyanwan/biodownload:latest
 
 点击 开始下载。
 
+
 ## ⚡ Windows 用户懒人脚本 (.bat)
 Windows 用户可以在本地创建一个名为 启动下载器.bat 的文件，粘贴以下内容。以后只需双击该文件即可自动运行，无需输入命令。
 
-```powershell
+```bat
 @echo off
 title BIOdownloadHTML Launcher
 echo Pulling latest updates...
@@ -64,7 +66,8 @@ echo.
 echo 正在启动服务... 请稍后打开 http://localhost:8501
 docker run --rm -p 8501:8501 -v %drive%:\:/data boyanwan/biodownload:latest
 pause
-```powershell
+```
+
 
 ## 🛠️ 源码安装 (开发者模式)
 如果你熟悉 Python/Conda 且不想使用 Docker，可以从源码运行。
@@ -74,17 +77,18 @@ Python 3.9+
 
 Conda (Miniconda/Anaconda)
 
-注意：Windows 直接运行源码可能会遇到 iseq 依赖缺失问题，强烈建议使用 WSL 或 Docker。
+⚠️ 注意：Windows 直接运行源码可能会遇到 iseq 依赖缺失问题，强烈建议使用 WSL 或 Docker。
 
 安装步骤
-克隆仓库
+1. 克隆仓库
 
-Bash
+```Bash
 git clone [https://github.com/boyanwan/BIOdownloadHTML.git](https://github.com/boyanwan/BIOdownloadHTML.git)
 cd BIOdownloadHTML
-创建环境
+```
+2. 创建环境
 
-Bash
+```Bash
 # 使用清华源加速
 conda config --add channels [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/)
 conda config --add channels [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/](https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/)
@@ -93,10 +97,12 @@ conda config --add channels [https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 conda create -n bio_env python=3.9 iseq pip -y
 conda activate bio_env
 pip install streamlit
-运行应用
+```
+3. 运行应用
 
-Bash
+```Bash
 streamlit run app.py
+```
 
 ## ❓ 常见问题 (FAQ)
 Q1: 为什么下载完成后文件夹是空的？
@@ -118,3 +124,6 @@ A: 点击网页右上角的 "Stop" 按钮，或者直接刷新网页（F5），�
 Q4: 我可以用它下载受控数据 (dbGaP) 吗？
 
 A: 不支持。本工具仅支持公开数据（Public Data）。受控数据需要特定的密钥和权限，请使用官方 prefetch 工具。
+
+📄 License
+本项目基于 MIT License 开源。
