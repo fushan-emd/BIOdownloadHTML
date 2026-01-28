@@ -1,0 +1,12 @@
+# .gitignore
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+.DS_Store
+.streamlit/secrets.toml
+
+# 忽略临时文件和下载的数据
+input_temp.txt
+*_temp.txt
+data/
+downloads/

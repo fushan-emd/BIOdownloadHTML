@@ -1,0 +1,11 @@
+[theme]
+base = "light"             # 强制白色主题
+primaryColor = "#2E8B57"   # 海洋绿 (Bio Green)
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6" # 侧边栏浅灰
+textColor = "#262730"
+font = "sans serif"
+
+[server]
+enableCORS = false
+enableXsrfProtection = false
