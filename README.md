@@ -34,6 +34,7 @@ BIOdownloadHTML 是一个轻量级、可视化的生物信息数据下载工具�
 ```powershell
 # 假设你想把数据下载到 F 盘 (请根据实际情况修改盘符)
 docker run -p 8501:8501 -v F:\:/data boyanwan/biodownload:latest
+```powershell
 注意：
 
 -v F:\:/data 表示将你的 F 盘挂载到容器内。下载的数据会出现在 F:\ 下你指定的文件夹中。
@@ -63,6 +64,7 @@ echo.
 echo 正在启动服务... 请稍后打开 http://localhost:8501
 docker run --rm -p 8501:8501 -v %drive%:\:/data boyanwan/biodownload:latest
 pause
+```powershell
 
 ## 🛠️ 源码安装 (开发者模式)
 如果你熟悉 Python/Conda 且不想使用 Docker，可以从源码运行。
