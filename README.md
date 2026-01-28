@@ -51,9 +51,7 @@ Linux/Mac 用户，请使用： docker run -p 8501:8501 -v $(pwd):/data boyanwan
 
 点击 开始下载。
 
----
-
-## ⚡ Windows 用户懒人脚本 (.bat)
+### ⚡ Windows 用户懒人脚本 (.bat)
 Windows 用户可以在本地创建一个名为 启动下载器.bat 的文件，粘贴以下内容。以后只需双击该文件即可自动运行，无需输入命令。
 
 ```bat
