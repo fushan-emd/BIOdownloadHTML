@@ -1,12 +1,22 @@
 # .gitignore
+
+# 1. 忽略 Python 缓存和环境
 __pycache__/
 *.pyc
 .ipynb_checkpoints
 .DS_Store
+.venv/
+env/
+
+# 2. 忽略 Streamlit 密钥
 .streamlit/secrets.toml
 
-# 忽略临时文件和下载的数据
+# 3. 忽略下载的数据和临时文件 (关键！)
 input_temp.txt
 *_temp.txt
 data/
 downloads/
+*.fastq
+*.fastq.gz
+*.sra
+*.log
