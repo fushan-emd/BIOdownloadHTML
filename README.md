@@ -8,7 +8,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 BIOdownloadHTML 是一个轻量级、可视化的生物信息数据下载工具。它封装了 `iseq` 核心，解决了生信小白在 Windows 上配置环境难、命令行操作复杂的问题。
-![Uploading da95ea3a9e88c44752bda9e803779171.png…]()
+
+<img width="2559" height="1341" alt="image" src="https://github.com/user-attachments/assets/0262c13c-c0b7-4bc9-aea3-1a88ff2efa9f" />
 
 ## ✨ 主要功能
 
