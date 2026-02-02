@@ -1,4 +1,4 @@
-# 🧬 BIOdownloadHTML
+# 🧬 BIOdownloadHTML V1.3
 
 **基于 Docker 的生物数据自动化下载平台 (SRA / ENA / CRA-GSA)**
 
@@ -30,11 +30,14 @@ BIOdownloadHTML 是一个轻量级、可视化的生物信息数据下载工具�
 
 ### 1. 安装 Docker
 请前往 [Docker 官网](https://www.docker.com/products/docker-desktop/) 下载并安装 Docker Desktop。
+使用本项目时应保持docker的启动
 
 ### 2. 启动软件
 打开 **Windows PowerShell** (不是 WSL)，运行以下命令：
 
 ```powershell
+# 获取最新版本
+docker pull boyanwan/biodownload:latest
 # 假设你想把数据下载到 F 盘 (请根据实际情况修改盘符)
 docker run -p 8501:8501 -v F:\:/data boyanwan/biodownload:latest
 ```
